@@ -2,9 +2,10 @@ package HuffmanTree;
 
 public class HuffmanNode implements Comparable<HuffmanNode>{
 
-    char ch;
+    public char ch;
     int freq;
-    HuffmanNode left, right;
+    public HuffmanNode left;
+    public HuffmanNode right;
 
     HuffmanNode(char ch, int freq, HuffmanNode left, HuffmanNode right) {
         this.ch = ch;
@@ -13,12 +14,12 @@ public class HuffmanNode implements Comparable<HuffmanNode>{
         this.right = right;
     }
 
-    boolean isLeaf() {
+    public boolean isLeaf() {
         return (left == null) && (right == null);
     }
 
     @Override
     public int compareTo(HuffmanNode o) {
-        return 0;
+        return this.freq - o.freq;
     }
 }
