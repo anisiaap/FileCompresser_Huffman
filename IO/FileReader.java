@@ -9,9 +9,10 @@ public class FileReader {
         try {
             return Files.readAllBytes(Paths.get(filePath));
         } catch (IOException e) {
-            System.err.println("Error reading file: " + filePath);
+            System.err.println("error reading file " + filePath);
             e.printStackTrace();
             return null;
         }
     }
+
 }
